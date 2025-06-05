@@ -6,4 +6,5 @@ const AttendanceSchema = new mongoose.Schema({
   timestamp: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Attendance', AttendanceSchema);
+// Use existing model if already compiled
+module.exports = mongoose.models.Attendance || mongoose.model('Attendance', AttendanceSchema);

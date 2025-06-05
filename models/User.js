@@ -6,4 +6,4 @@ const AttendanceSchema = new mongoose.Schema({
   timestamp: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Attendance', AttendanceSchema);
+module.exports = mongoose.models.User || mongoose.model('User', UserSchema);
