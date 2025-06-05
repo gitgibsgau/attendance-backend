@@ -2,6 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+require("dotenv").config();
+console.log("MONGO_URI from env:", process.env.MONGO_URI); // Temporary check
+
 
 dotenv.config();
 const app = express();
